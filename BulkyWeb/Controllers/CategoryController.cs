@@ -26,10 +26,19 @@ namespace BulkyWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category obj)
         {
-
+            if (obj.Name == obj.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("Name", "The Category Name cannot be the same as the Display Order.");
+            }
+            if (ModelState.IsValid)
+            {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
+
+            }
+            return View(obj);
         }
     }
 }
