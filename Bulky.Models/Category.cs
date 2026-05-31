@@ -11,7 +11,7 @@ namespace Bulky.Models
         [Required]
         [MaxLength(30, ErrorMessage = "Category Name cannot exceed 30 characters.")]
         [DisplayName("Category Name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [DisplayName("Display Order")]
         [Range(1, 100, ErrorMessage = "Display Order must be between 1 and 100.")]
