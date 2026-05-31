@@ -4,7 +4,7 @@ namespace Bulky.DataAccess.Repository.IRepository
 {
     public interface IProductRepository : IRepository<Product>
     {
-        void Save();
         void Update(Product obj);
+        void Save();
     }
 }
