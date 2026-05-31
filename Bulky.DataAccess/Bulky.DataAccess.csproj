@@ -12,8 +12,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Bulky.Models\Bulky.Models.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\ICategoryRepository\" />
-    <Folder Include="Repository\IUnitOfWork\" />
-  </ItemGroup>
 </Project>
