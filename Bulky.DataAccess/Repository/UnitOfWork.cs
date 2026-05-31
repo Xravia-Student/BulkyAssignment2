@@ -20,9 +20,5 @@ namespace Bulky.DataAccess.Repository
             _db.SaveChanges();
         }
 
-        public void Dispose()
-        {
-            _db.Dispose();
-        }
     }
 }
