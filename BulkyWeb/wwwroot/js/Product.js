@@ -27,7 +27,7 @@ function loadDataTable() {
                         </a>
                     </div>`;
                 },
-                "width": "25%"
+                "width": "15%"
             }
         ]
     });
@@ -35,13 +35,13 @@ function loadDataTable() {
 
 function Delete(url) {
     Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        title: "Are you okay Annie? are you sure youo want to do this?",
+        text: "You won't be able to turn back time",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+        confirmButtonText: "Yes"
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
