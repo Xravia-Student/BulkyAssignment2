@@ -41,7 +41,8 @@ public class RegisterModel : PageModel
         IUserStore<ApplicationUser> userStore,
         SignInManager<ApplicationUser> signInManager,
         ILogger<RegisterModel> logger,
-        IEmailSender emailSender)
+        IEmailSender emailSender,
+        RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _userStore = userStore;
@@ -49,6 +50,7 @@ public class RegisterModel : PageModel
         _signInManager = signInManager;
         _logger = logger;
         _emailSender = emailSender;
+        _roleManager = roleManager;
     }
 
     /// <summary>
